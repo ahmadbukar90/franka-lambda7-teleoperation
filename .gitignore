@@ -1,0 +1,27 @@
+# Python temporary files
+__pycache__/
+*.py[cod]
+
+# ROS 2 generated files
+build/
+install/
+log/
+
+# Experimental data and recordings
+*.csv
+*.bag
+*.db3
+*.mcap
+*.zip
+recordings/
+data/
+
+# Local configuration and secrets
+.env
+*.key
+*.pem
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
