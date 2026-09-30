@@ -136,3 +136,13 @@ This framework provides a modular basis for research and prototyping of bilatera
 - **Marine and subsea teleoperation:** contact-aware inspection and manipulation in underwater or hazardous environments where direct human access is difficult.
 
 The Lambda.7 haptic device, Cartesian force feedback, RealSense proximity sensing, and GelSight tactile sensing can support richer operator perception during remote manipulation. Performance and safety must be validated separately for each target application.
+
+## Complete experimental setup
+
+![Complete Lambda.7–Franka FR3 teleoperation setup](docs/images/complete-setup.png)
+
+*Complete experimental setup integrating the Lambda.7 haptic device, Franka Research 3 robot, RealSense D405 camera, and GelSight tactile sensor.*
+
+## Video demonstration
+
+[Watch the teleoperation experiment on YouTube](https://youtu.be/siAZwTnRl4s)
