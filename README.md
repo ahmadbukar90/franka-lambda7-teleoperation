@@ -11,7 +11,9 @@ mapping, Intel RealSense D405 vision, and GelSight tactile feedback.
 
 ## Quick start
 
-Full instructions are in [docs/INSTALL.md](docs/INSTALL.md).
+Full installation and safety instructions are in [docs/INSTALL.md](docs/INSTALL.md).
+For the node-by-node workflow, ROS topics, calibration notes, and debugging,
+see the [detailed operating guide](docs/DETAILED_OPERATING_GUIDE.md).
 
 ```bash
 mkdir -p ~/ros2_ws/src
