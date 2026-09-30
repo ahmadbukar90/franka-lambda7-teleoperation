@@ -1,0 +1,35 @@
+lambda_linear_bridge:
+  ros__parameters:
+    input_topic: /twist
+    button_topic: /buttons
+    output_topic: /cmd_vel_raw
+    output_frame: base
+    max_linear_velocity: 0.05
+    max_angular_velocity: 0.15
+    enable_ramp_duration: 0.5
+    disable_ramp_duration: 0.25
+
+smoothed_cmd_vel:
+  ros__parameters:
+    input_topic: /cmd_vel_raw
+    output_topic: /NS_1/mobile_cartesian_velocity_controller/cmd_vel
+    pre_depth_output_topic: /cmd_vel_filtered_pre_depth
+    depth_topic: /rgb_depth
+    command_timeout_sec: 0.25
+    publish_rate_hz: 250.0
+    max_linear_vel_x: 0.05
+    max_linear_vel_y: 0.05
+    max_linear_vel_z: 0.05
+    max_angular_vel_x: 0.15
+    max_angular_vel_y: 0.15
+    max_angular_vel_z: 0.15
+    max_feedback_force: 2.0
+
+lambda_gripper_bridge:
+  ros__parameters:
+    gripper_topic: /gripper/angle_rad
+    button_topic: /buttons
+    gripper_action: /NS_1/franka_gripper/move
+    franka_joint_state_topic: /NS_1/franka_gripper/joint_states
+    gripper_speed: 0.04
+    require_enable_button: true

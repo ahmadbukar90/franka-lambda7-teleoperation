@@ -1,0 +1,8 @@
+# Install after sourcing ROS 2 Humble:
+# python3 -m pip install -r requirements.txt
+numpy
+opencv-python
+scipy
+pydantic
+torch
+pyrealsense2
