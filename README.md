@@ -1,6 +1,6 @@
 # Lambda.7–Franka FR3 ROS 2 Teleoperation
 
-A ROS 2 Humble velocity–velocity teleoperation framework for a Force Dimension Lambda.7 haptic device and Franka Research 3 robot. It includes Cartesian velocity control, adaptive proximity/force feedback, Franka gripper control, Intel RealSense D405 operator vision, and GelSight tactile depth feedback.
+A ROS 2 Humble velocity–velocity teleoperation framework for a Force Dimension Lambda.7 haptic device and Franka Research 3 robot. It includes Cartesian velocity control, adaptive proximity force feedback, Franka gripper control, Intel RealSense D405 operator vision, and GelSight tactile depth feedback.
 
 ## Safety
 
