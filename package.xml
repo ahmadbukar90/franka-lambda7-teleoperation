@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>lambda_franka_teleop</name>
+  <version>0.1.0</version>
+  <description>ROS 2 nodes and launch files for Lambda.7–Franka FR3 teleoperation.</description>
+  <maintainer email="ahmadbukar90@gmail.com">Ahmad Abubakar</maintainer>
+  <license>Proprietary; contact the repository owner for reuse permissions.</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>franka_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

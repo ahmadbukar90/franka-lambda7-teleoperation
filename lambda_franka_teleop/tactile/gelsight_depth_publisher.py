@@ -3,15 +3,16 @@
 import cv2
 import time
 import numpy as np
+from pathlib import Path
 
 import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import Float32, Float64, Bool, UInt8
 
-from utilities.reconstruction import Reconstruction3D
-from config import GSConfig
-from utilities.gelsightmini import GelSightMini
+from .utilities.reconstruction import Reconstruction3D
+from .config import GSConfig
+from .utilities.gelsightmini import GelSightMini
 
 
 LEFT_CAMERA_PATH = "/dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._GelSight_Mini_R0B_2DUN-7MA1_2DUN7MA1-video-index0"
@@ -87,7 +88,8 @@ class GelSightDepthPublisher(Node):
 
         self.get_logger().info("Loading GelSight depth model...")
 
-        self.gs_config = GSConfig("default_config.json")
+        package_dir = Path(__file__).resolve().parent
+        self.gs_config = GSConfig(str(package_dir / "default_config.json"))
 
         self.reconstruction = Reconstruction3D(
             image_width=self.gs_config.config.camera_width,
@@ -95,7 +97,11 @@ class GelSightDepthPublisher(Node):
             use_gpu=self.gs_config.config.use_gpu,
         )
 
-        if self.reconstruction.load_nn(self.gs_config.config.nn_model_path) is None:
+        model_path = Path(self.gs_config.config.nn_model_path)
+        if not model_path.is_absolute():
+            model_path = package_dir / model_path
+
+        if self.reconstruction.load_nn(str(model_path)) is None:
             raise RuntimeError("Failed to load depth model")
 
         self.warmup()
