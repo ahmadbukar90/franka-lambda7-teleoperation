@@ -126,3 +126,13 @@ Generated CSV logs are intentionally ignored by Git.
 - `teleop_nodes/`: Lambda.7–Franka bridge, adaptive controller, gripper mapping, and logger
 - `camera/`: RealSense D405 detection and operator-view nodes
 - `tactile/`: GelSight tactile depth publisher, force relay, configuration, utilities, and model
+
+## Potential application domains
+
+This framework provides a modular basis for research and prototyping of bilateral teleoperation with high-fidelity haptic cues. Potential application domains include:
+
+- **Agriculture:** remote crop inspection, delicate fruit harvesting, and contact-aware manipulation in greenhouse or field environments.
+- **Healthcare and medical robotics:** research on remote manipulation, training simulators, and contact-rich assistance tasks. Clinical deployment requires separate safety validation, regulatory approval, and human-factors evaluation.
+- **Marine and subsea teleoperation:** contact-aware inspection and manipulation in underwater or hazardous environments where direct human access is difficult.
+
+The Lambda.7 haptic device, Cartesian force feedback, RealSense proximity sensing, and GelSight tactile sensing can support richer operator perception during remote manipulation. Performance and safety must be validated separately for each target application.
