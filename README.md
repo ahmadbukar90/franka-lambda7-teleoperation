@@ -75,7 +75,7 @@ GelSight tactile sensor.*
 
 ## Video demonstration
 
-[Watch the teleoperation experiment on YouTube](https://youtu.be/siAZwTnRl4s)
+[Watch the teleoperation experiment on YouTube](https://youtu.be/BOQtUj3qOpU)
 
 ## Potential application domains
 
